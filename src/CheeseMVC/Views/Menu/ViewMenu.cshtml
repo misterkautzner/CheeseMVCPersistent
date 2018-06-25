@@ -4,9 +4,9 @@
 }
 
 <ul>
-    @foreach(var item in Model.Items) {
-        <li>@item.Cheese.Name</li>
+    @foreach(var cheeseMenu in @Model.Items) {
+        <li>@cheeseMenu.Cheese.Name</li>
     }
 </ul>
 
-<a asp-controller="Menu" asp-action="AddItem" asp-route-id="@Model.Menu.ID" method="get"/>
+<a asp-controller="Menu" asp-action="AddItem" asp-route-id="@Model.Menu.ID" method="get">Add Cheese</a>
